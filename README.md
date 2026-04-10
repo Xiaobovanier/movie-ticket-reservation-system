@@ -66,12 +66,14 @@ React (Vite) → Spring Boot → PostgreSQL
 
 ## 📁 Project Structure
 
+```text
 movie-ticket-reservation-system/
 
 ├── movie-ticket-system/      # Backend (Spring Boot)
 ├── movie-ticket-frontend/    # Frontend (React)
 ├── movie-ticket-docker/      # Docker configuration
 └── .gitignore
+```
 
 ---
 
