@@ -112,13 +112,6 @@ docker compose up --build
 
 ---
 
-## 📌 API Example
-
-GET /api/movies
-
-POST /api/auth/login
-
----
 
 ## 👨‍🎓 Author
 
