@@ -1,0 +1,180 @@
+.app-shell {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+
+.hero-banner {
+  width: 100%;
+  height: 320px;
+  background-image:
+          linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("https://images.pexels.com/photos/390089/film-movie-motion-picture-390089.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-overlay {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 36px;
+}
+
+.hero-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+.top-nav {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  padding: 0;
+}
+
+.top-nav-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #0b57d0;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #eef4ff;
+  text-decoration: none;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.user-fullname {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  color: #333;
+  font-weight: 600;
+  border: 1px solid #dddddd;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  border: 1px solid #999;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #f0f0f0;
+}
+
+
+.page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 24px 40px;
+}
+
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+  color: #111;
+}
+
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.page-content th,
+.page-content td {
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .hero-banner {
+    height: 220px;
+  }
+
+  .hero-overlay {
+    padding: 0 16px 28px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .top-nav-inner {
+    padding: 12px 16px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding: 7px 10px;
+  }
+
+  .page-content {
+    padding: 20px 16px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner {
+    height: 180px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .top-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

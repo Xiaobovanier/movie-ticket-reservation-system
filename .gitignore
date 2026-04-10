@@ -1,0 +1,30 @@
+# IntelliJ
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env / secrets
+.env
+.env.*
+*.env
+
+# Backend
+movie-ticket-system/target/
+movie-ticket-system/.idea/
+movie-ticket-system/*.iml
+
+# Frontend
+movie-ticket-frontend/node_modules/
+movie-ticket-frontend/dist/
+movie-ticket-frontend/build/
+movie-ticket-frontend/.idea/
+movie-ticket-frontend/*.iml
+
+# Docker / temp
+*.tar
