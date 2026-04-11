@@ -29,7 +29,6 @@ This project is a complete web-based movie ticket reservation system developed a
 ### 🐳 Docker
 - Docker environment prepared
 - docker-compose configuration included
-- Backend + database containerized (frontend in progress)
 
 ---
 
