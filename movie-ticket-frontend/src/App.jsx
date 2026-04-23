@@ -18,6 +18,7 @@ function App() {
     const token = localStorage.getItem("token");
     const email = localStorage.getItem("email");
     const fullName = localStorage.getItem("fullName");
+    const isLoggedIn = !!token;
     const isAdmin = email === "admin@test.com";
 
     function handleLogout() {
@@ -38,20 +39,29 @@ function App() {
             <nav className="top-nav">
                 <div className="top-nav-inner">
                     <div className="nav-links">
-                        <Link className="nav-link" to="/">
-                            Login
-                        </Link>
-                        <Link className="nav-link" to="/register">
-                            Register
-                        </Link>
-                        <Link className="nav-link" to="/movies">
-                            Movies
-                        </Link>
-                        <Link className="nav-link" to="/reservations/my">
-                            My Reservations
-                        </Link>
+                        {!isLoggedIn && (
+                            <>
+                                <Link className="nav-link" to="/">
+                                    Login
+                                </Link>
+                                <Link className="nav-link" to="/register">
+                                    Register
+                                </Link>
+                            </>
+                        )}
 
-                        {isAdmin && (
+                        {isLoggedIn && (
+                            <>
+                                <Link className="nav-link" to="/movies">
+                                    Movies
+                                </Link>
+                                <Link className="nav-link" to="/reservations/my">
+                                    My Reservations
+                                </Link>
+                            </>
+                        )}
+
+                        {isLoggedIn && isAdmin && (
                             <>
                                 <Link className="nav-link" to="/admin/movies">
                                     Admin Movies
@@ -66,11 +76,11 @@ function App() {
                         )}
                     </div>
 
-                    {token && (
+                    {isLoggedIn && (
                         <div className="user-actions">
-              <span className="user-fullname">
-                {fullName ? fullName : email}
-              </span>
+                            <span className="user-fullname">
+                                {fullName ? fullName : email}
+                            </span>
 
                             <button className="logout-btn" onClick={handleLogout}>
                                 Logout
